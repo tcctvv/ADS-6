@@ -17,7 +17,7 @@ class TPQueue {
     Node* head_ = nullptr;
     Node* tail_ = nullptr;
 
-public:
+ public:
     TPQueue()  = default;
     ~TPQueue() {
       clear();
@@ -60,7 +60,10 @@ public:
     }
 
     T pop() {
-        if (empty()) throw std::out_of_range("TPQueue::pop(): queue is empty");
+        if (empty()) {  
+            throw std::out_of_range(  
+                "TPQueue::front(): queue is empty");  
+        }
 
         Node* temp = head_;
         T     val = head_->data;
