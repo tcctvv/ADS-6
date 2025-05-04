@@ -61,7 +61,7 @@ class TPQueue {
 
     T pop() {
         if (empty()) {
-            throw std::out_of_range (
+            throw std::out_of_range(
                 "TPQueue::front(): queue is empty");
         }
 
@@ -75,7 +75,7 @@ class TPQueue {
 
     const T& front() const {
         if (empty()) {
-            throw std::out_of_range (
+            throw std::out_of_range(
                 "TPQueue::front(): queue is empty");
         }
         return head_->data;
